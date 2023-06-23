@@ -1,0 +1,32 @@
+{
+  "name": "globalxtreme/open-api",
+  "description": "GlobalXtreme Open API Package for Laravel",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yuswa",
+      "email": "yuswa98@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "GlobalXtreme\\OpenAPI\\": "src/"
+    },
+    "files": [
+      "src/Misc/helpers.php"
+    ]
+  },
+  "require": {
+    "php": "8.*",
+    "guzzlehttp/guzzle": "^7.0|^7.5",
+    "illuminate/support": "^7.0|^8.0|^9.0",
+    "globalxtreme/response": "^1.1"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "GlobalXtreme\\OpenAPI\\OpenAPIServiceProvider"
+      ]
+    }
+  }
+}

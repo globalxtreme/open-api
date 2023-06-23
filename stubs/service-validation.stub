@@ -1,0 +1,29 @@
+<?php
+
+namespace {{ namespace }};
+
+use GlobalXtreme\OpenAPI\Validation\ServiceValidation;
+
+class {{ class }} extends ServiceValidation
+{
+    const CLIENT = 'service';
+
+    const URI = ServiceValidation::URI + [
+        'FEATURE' => 'features',
+    ];
+
+
+    /** --- FUNCTIONS --- */
+
+    /**
+     * @param $payload
+     *
+     * @return \Illuminate\Http\JsonResponse
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public static function example($payload)
+    {
+        return static::call(static::setURL(static::URI['FEATURE']), $payload, 'post');
+    }
+
+}
