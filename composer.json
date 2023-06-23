@@ -11,10 +11,7 @@
   "autoload": {
     "psr-4": {
       "GlobalXtreme\\OpenAPI\\": "src/"
-    },
-    "files": [
-      "src/Misc/helpers.php"
-    ]
+    }
   },
   "require": {
     "php": "8.*",
