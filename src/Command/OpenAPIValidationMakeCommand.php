@@ -3,6 +3,7 @@
 namespace GlobalXtreme\OpenAPI\Command;
 
 use Illuminate\Console\GeneratorCommand;
+use Illuminate\Support\Facades\Log;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -32,14 +33,14 @@ class OpenAPIValidationMakeCommand extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new Constant class';
+    protected $description = 'Create a new open API class';
 
     /**
      * The type of class being generated.
      *
      * @var string
      */
-    protected $type = 'Constant';
+    protected $type = 'Open API';
 
     /**
      * Get the stub file for the generator.
@@ -48,7 +49,7 @@ class OpenAPIValidationMakeCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return $this->resolveStubPath('/stubs/constant.stub');
+        return $this->resolveStubPath('/vendor/globalxtreme/open-api/stubs/service-validation.stub');
     }
 
     /**
